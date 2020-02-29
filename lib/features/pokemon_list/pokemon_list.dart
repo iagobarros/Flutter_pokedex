@@ -54,6 +54,7 @@ class _PokemonListPageState extends State<PokemonListPage> {
   }
 
   _feedDataSource() {
+    LinearProgressIndicator();
     widget.service.fetchAllKantoPokemon().then((response) {
       var json = jsonDecode(response.body);
       List<AllPokemonReponse> pokemonList = [];
